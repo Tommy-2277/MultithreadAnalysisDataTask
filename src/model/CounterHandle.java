@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.concurrent.Callable;
 
 public class CounterHandle implements Callable<List<Integer>> {
-    private String path;
+    private final String path;
 
     public CounterHandle(String path) {
         this.path = path;
@@ -36,8 +36,8 @@ public class CounterHandle implements Callable<List<Integer>> {
                 i--;
             }
         }
-        List<Integer> results = new ArrayList<>();
-        results.add(0, countSymbols(textFromFile));
+        List<Integer> results = new ArrayList<>();//can replaced with List.of(elements...)
+        results.add(0, countSymbols(textFromFile));//list.add() works also fine, no need to add index
         results.add(1, countSpaces(textFromFile));
         results.add(2, countSentences(textFromFileByWords));
         results.add(3, countWords(textFromFileByWords));

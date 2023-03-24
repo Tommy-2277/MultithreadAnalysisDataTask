@@ -5,7 +5,7 @@ import java.nio.file.Path;
 import java.util.*;
 
 public class View {
-    Scanner scanner = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);//assign in constructor
 
     public int helloUser() {
         while (true) {
@@ -20,7 +20,7 @@ public class View {
         }
     }
 
-    public String getPath() {
+    public String getPath() {//that must be done in utils but for now is ok
         while (true) {
             System.out.println(enterPathToFile);
             String pathString = scanner.nextLine();
