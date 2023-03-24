@@ -11,15 +11,11 @@ import java.util.concurrent.*;
 
 public class Model {
 
-    List<FutureTask<List<Integer>>> tasks = new ArrayList<>();
+    List<FutureTask<List<Integer>>> tasks = new ArrayList<>();//assigning better be done in constructor
     List<String> fileNames = new ArrayList<>();
     List<List<Integer>> results = new ArrayList<>();
 
     public Model() {}
-    public Model(List<List<Integer>> results) {
-        this.results = results;
-    }
-
     public void addTask(String path) {
         FutureTask<List<Integer>> futureTask = new FutureTask<>(new CounterHandle(path));
         tasks.add(futureTask);

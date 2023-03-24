@@ -16,6 +16,6 @@ import java.util.concurrent.ExecutionException;
 public class Main {
     public static void main(String[] args) throws IOException, ExecutionException, InterruptedException {
         Controller controller = new Controller();
-        controller.controller();
+        controller.controller();//method name is not accurate
     }
 }

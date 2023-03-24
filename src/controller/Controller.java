@@ -7,10 +7,10 @@ import java.io.IOException;
 import java.util.concurrent.ExecutionException;
 
 public class Controller {
-    static Model model = new Model();
+    static Model model = new Model();//same
     static View view = new View();
 
-    public void controller() throws IOException, ExecutionException, InterruptedException {
+    public void controller() throws ExecutionException, InterruptedException {
         while(true) {
             int caseNumber = view.helloUser();
             if(caseNumber == 1) {
